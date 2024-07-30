@@ -3,9 +3,9 @@ pragma solidity ^0.8.0;
 contract SimpleStorage{
    uint256 favouriteNumber=4;
    //public keyword gives getter function for favourite number
-   function store(uint256 _favouriteNumber)public{
+   function store(uint256 _favouriteNumber)public virtual{
        favouriteNumber=_favouriteNumber;
-   }
+   }//virtual keyword make its overridable
    // to declare a list
    uint256[] listOfFavouriteNumber;
    function retrieve() public view returns(uint256){
@@ -14,7 +14,7 @@ contract SimpleStorage{
 
    }
    //functions are marked with publlic so that after deploying we can call that function and view keyword is used for those fucntions 
-   //which doesnt update blockchain ,this method is only retrieving favourite number from block not updating the blockchain
+   //which doesnt update blockchain ,this method is only retrieving favourite number from block not updating the blockchain,pure function cannot update and read block chains
    //to create own data type we use struct in solidity,to group variables into to one variable we use struct
    struct Person{    
         uint256 favouriteNumber;
