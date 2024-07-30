@@ -52,4 +52,4 @@ AggregatorV3Interface priceFeed=AggregatorV3Interface(0x694AA1769357215DE4FAC081
    }
 
 }
-//above maths calculations are done because it is appended with use less zero and no decimal point and function used are interface
+//above maths calculations are done because it is appended with use less zero and no decimal point and function used are of  interface which are present in contract somewhere lese which has been imported
